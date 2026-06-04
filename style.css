@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-green-500: hsl(158, 36%, 37%);
+  --color-green-700: hsl(158, 42%, 18%);
+  --color-black: hsl(212, 21%, 14%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --font-primary: "Montserrat", sans-serif;
+  --font-heading: "Fraunces", serif;
+}
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
