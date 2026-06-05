@@ -23,11 +23,7 @@
       <article class="product-card">
         <picture class="product-card__image">
           <source
-            media="(width <= 768px)"
-            srcset="./images/image-product-mobile.jpg"
-          />
-          <source
-            media="(width > 768px)"
+            media="(min-width: 600px)"
             srcset="./images/image-product-desktop.jpg"
           />
           <img
@@ -46,7 +42,7 @@
             <p class="product-card__current-price">$149.99</p>
             <del class="product-card__original-price">$169.99</del>
           </div>
-          <button class="product-card__cta">
+          <button type="button" class="product-card__cta">
             <img
               src="./images/icon-cart.svg"
               alt=""
