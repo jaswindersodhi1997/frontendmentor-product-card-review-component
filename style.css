@@ -1,8 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 :root {
   --color-green-500: hsl(158, 36%, 37%);
   --color-green-700: hsl(158, 42%, 18%);
@@ -14,10 +20,110 @@
   --font-primary: "Montserrat", sans-serif;
   --font-heading: "Fraunces", serif;
 }
-.attribution {
-  font-size: 0.6875rem;
-  text-align: center;
+
+.product-preview-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-cream);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.product-card {
+  max-width: 350px;
+  background: var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-card__image img {
+  width: 100%;
+}
+
+.product-card__content {
+  padding: 2rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-card__category {
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: var(--font-primary);
+  color: var(--color-grey);
+}
+
+.product-card__title {
+  font-family: var(--font-heading);
+  color: var(--color-black);
+  line-height: 1;
+}
+
+.product-card__description {
+  font-family: var(--font-primary);
+  color: var(--color-grey);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.product-card__pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+  font-family: var(--font-heading);
+}
+
+.product-card__current-price {
+  color: var(--color-green-500);
+  font-size: 2rem;
+}
+
+.product-card__original-price {
+  color: var(--color-grey);
+  font-size: 0.875rem;
+}
+
+.product-card__cta {
+  background: var(--color-green-500);
+  color: var(--color-white);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.92rem;
+}
+
+.product-card__cart-icon {
+  width: 1.05rem;
+}
+
+.product-card__cta:hover {
+  background: var(--color-green-700);
+  cursor: pointer;
+}
+
+/* Media Queries for Desktop View */
+@media (min-width: 769px) {
+  .product-card {
+    max-width: 600px;
+    max-height: 440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-card__image img {
+    height: 100%;
+  }
+
+  .product-card__pricing {
+    justify-items: center;
+  }
 }
